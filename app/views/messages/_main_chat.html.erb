@@ -8,19 +8,9 @@
     </div>
   </div>
 </div>
+
 <div class="main_chat_body">
-  <div class="chat_box">
-    <div class="upper_box">
-      <div class="chat_user_name">Tom</div>
-      <div class="chat_date">2020/3/31(Wed) 12:34:56</div>
-    </div>
-    <div class="under_box">
-      <div class="chat_text">おはよう</div>
-    </div>
-  </div>
-  <% @messages.each do |message| %>
-    <%= message.content %>
-  <% end %>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
