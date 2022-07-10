@@ -1,7 +1,7 @@
 class Message < ApplicationRecord
   belongs_to :user
   belongs_to :room
-  has_on_attached :image
+  has_one_attached :image
 
   validates :content, presence: true
 end
